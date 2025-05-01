@@ -100,7 +100,7 @@ export const updateStoreDelivery = createAsyncThunk(
   async ({ storeId, deliveryAvailable }, { getState }) => {
     const { auth } = getState();
     await axios.patch(
-      `http://localhost:5000/api/stores/${storeId}/delivery`,
+      `https://quick-medis.vercel.app/api/stores/${storeId}/delivery`,
       { deliveryAvailable },
       {
         headers: {
