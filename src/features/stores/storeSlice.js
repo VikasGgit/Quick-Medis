@@ -100,7 +100,7 @@ export const updateStoreDelivery = createAsyncThunk(
   async ({ storeId, deliveryAvailable }, { getState }) => {
     const { auth } = getState();
     await axios.patch(
-      `${API_BASE_URL}/{storeId}/delivery`,
+      `${API_BASE_URL}/${storeId}/delivery`,
       { deliveryAvailable },
       {
         headers: {
